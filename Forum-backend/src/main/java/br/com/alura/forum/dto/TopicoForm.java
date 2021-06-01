@@ -4,10 +4,22 @@ import br.com.alura.forum.entities.Curso;
 import br.com.alura.forum.entities.Topico;
 import br.com.alura.forum.repository.CursoRepository;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Min;
+
 public class TopicoForm {
 
+    @NotNull
+    @NotEmpty
     private String titulo;
+
+    @NotNull
+    @NotEmpty
     private String mensagem;
+
+    @NotNull
+    @NotEmpty
     private String nomeCurso;
 
     public String getTitulo() {
