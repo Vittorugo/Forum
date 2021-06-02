@@ -6,7 +6,6 @@ import br.com.alura.forum.repository.CursoRepository;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Min;
 
 public class TopicoForm {
 
