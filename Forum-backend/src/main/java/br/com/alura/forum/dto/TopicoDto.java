@@ -1,11 +1,10 @@
 package br.com.alura.forum.dto;
 
 import br.com.alura.forum.entities.Topico;
+import org.springframework.data.domain.Page;
 import org.springframework.lang.NonNull;
 
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class TopicoDto {
 
@@ -37,7 +36,7 @@ public class TopicoDto {
         return dataCriacao;
     }
 
-    public static List<TopicoDto> converter(@NonNull List<Topico> topicos) {
-        return topicos.stream().map(TopicoDto::new).collect(Collectors.toList());
+    public static Page<TopicoDto> converter(@NonNull Page<Topico> topicos) {
+        return topicos.map(TopicoDto::new);
     }
 }
